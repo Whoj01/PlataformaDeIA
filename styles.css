@@ -1,0 +1,223 @@
+/*====================== Resets =============================*/
+
+:root {
+	--color-gray-01: #f8fafc;
+	--color-gray-02: #e2e8f0;
+	--color-gray-03: #94a3b8;
+	--color-gray-04: #334155;
+	--color-gray-05: #1e293b;
+	--color-gray-06: #0f172a;
+	--color-gray-07: hsla(229, 84%, 5%, 0.801);
+
+
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, button {
+  font-size: 1.6rem;
+}
+
+/*Main*/
+
+.container {
+	min-height: 100vh;
+	max-width: 100vw;
+	width: 100%;
+	height: 100%;
+
+	background: url(./assets/img/IMGBG.png) no-repeat left center / cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*Box*/
+
+.container .box {
+	max-width: 121.6rem;
+	width: 100%;
+	min-height: 86.6rem;
+	height: 100%;
+	background: var(--color-gray-07);
+	padding: 6rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 3.2rem;
+	gap: 4rem;
+}
+
+.container .box .info {
+	max-width: 68.2rem;
+}
+
+/*Header box*/
+.container .box .info .header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2.4rem;
+	margin-bottom: 4rem;
+}
+
+.iconBox {
+	padding: 1.2rem;
+	background: var(--color-gray-06);
+	border-radius: 1.6rem;
+	display: flex;
+	align-items: center;
+}
+
+.container .box .info .header div > img {
+	width: 4rem;
+	height: 4rem;
+}
+
+.container .box .info .header h1 {
+	font-weight: 600;
+	font-size: 3.2rem;
+	color: var(--color-gray-01);
+}
+
+/*List of IAS*/
+
+.container .box .info .IAList ul {
+	display: flex;
+	flex-direction: column;
+	gap: 1.6rem;
+	align-items: center;
+}
+
+.container .box .info .IAList ul li {
+	display: flex;
+	align-items: center;
+	background: var(--color-gray-06);
+	max-width: 60.8rem;
+	width: 100%;
+	min-height: 9.6rem;
+	border: 2px solid var(--color-gray-04);
+	border-radius: 1.6rem;
+	padding: 1.6rem;
+	justify-content: space-between;
+	transition: background .5s;
+}
+
+.container .box .info .IAList ul li:hover {
+	background-color: var(--color-gray-04);
+	cursor: pointer;
+}
+
+.container .box .info .IAList ul li > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2.4rem;
+}
+
+.container .box .info .IAList ul li > div .iconBox {
+	border: 2px solid var(--color-gray-05);
+}
+
+.container .box .info .IAList ul li > div .iconBox:hover {
+	background-color: var(--color-gray-04);
+	cursor: pointer;
+}
+
+.container .box .info .IAList ul li > div p {
+	color: var(--color-gray-02);
+	font-weight: 600;
+	font-size: 1.8rem;
+}
+
+/*divisor*/
+.divisor {
+	height: 2px;
+	width: 100%;
+	background: var(--color-gray-04);
+}
+
+/*Input*/
+
+.container .box .send {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	gap: 1.6rem;
+}
+
+.container .box .send input {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	min-height: 6.4rem;
+	padding-left: 6.4rem;
+	border-radius: 1.6rem;
+	background: var(--color-gray-06);
+	border: 1px solid var(--color-gray-04);
+	outline: none;
+	word-break: break-all;
+	word-wrap: break-word;
+
+	color: var(--color-gray-02);
+	font-weight: 400;
+}
+
+.container .box .send input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--color-gray-02);
+}
+
+.container .box .send input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--color-gray-02);
+}
+
+.container .box .send input::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--color-gray-02);
+}
+
+/*Button*/
+
+.container .box .send .plus  {
+	position: absolute;
+	margin-left: 1.6rem;
+}
+
+.container .box .send .iconBox {
+	height: 6.4rem;
+	border: 1px solid var(--color-gray-04);
+	transition: background .5s;
+}
+
+.container .box .send .iconBox:hover {
+	background: var(--color-gray-04);
+	cursor: pointer;
+}
+
+.container .box .send .iconBox img {
+	height: 3.2rem;
+	width: 3.2rem;
+}
+
+
+@media(max-width: 1250px) {
+	.container {
+		align-items: unset;
+		justify-content: unset;
+	}
+
+	.container .box {
+		border-radius: initial;
+		min-height: 100vh;
+	}
+
+	.container .box .info .header h1 {
+		text-align: center;
+	}
+}
